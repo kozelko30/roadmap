@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StoxEye Roadmap</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b1220;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;padding-bottom:40px}
+.header{background:linear-gradient(135deg,#0f1f3d,#1a2f5a);padding:24px 20px;text-align:center;border-bottom:1px solid #243050;position:sticky;top:0;z-index:10}
+.header h1{font-size:20px;font-weight:700;color:#fff}
+.header p{font-size:13px;color:#94a3b8;margin-top:4px}
+.tabs{display:flex;gap:6px;padding:12px 16px;background:#141f35;border-bottom:1px solid #243050;overflow-x:auto}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid #243050;color:#94a3b8;background:transparent}
+.tab.on{background:#2563eb;border-color:#2563eb;color:#fff}
+.phase{display:none;padding:0 16px;margin-top:16px}
+.phase.on{display:block}
+.tip{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);border-radius:12px;padding:12px;margin-bottom:14px;font-size:13px;color:#60a5fa;line-height:1.5}
+.sec{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#64748b;margin:16px 0 8px}
+.card{background:#1a2744;border:1px solid #243050;border-radius:16px;padding:14px;margin-bottom:12px}
+.card-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ico{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:#0f1f3d}
+.card-title{font-size:15px;font-weight:700;color:#fff}
+.card-sub{font-size:12px;color:#64748b}
+.card-desc{font-size:13px;color:#94a3b8;margin-bottom:10px;line-height:1.5}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:8px}
+.p1{background:rgba(239,68,68,.15);color:#ef4444}
+.p2{background:rgba(245,158,11,.15);color:#f59e0b}
+.p3{background:rgba(34,197,94,.15);color:#22c55e}
+.lnk{display:flex;align-items:center;gap:10px;padding:11px 12px;background:#0f1f3d;border:1px solid #243050;border-radius:12px;text-decoration:none;color:#e2e8f0;margin-bottom:6px}
+.lnk:active{background:#243050}
+.lnk-body{flex:1;min-width:0}
+.lnk-title{font-size:13px;font-weight:600;color:#fff;display:block}
+.lnk-src{font-size:11px;color:#64748b;display:block;margin-top:2px}
+.badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;flex-shrink:0}
+.free{color:#22c55e;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3)}
+.vid{color:#ef4444;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3)}
+.arr{color:#64748b;font-size:18px;flex-shrink:0}
+.routine{background:#141f35;border:1px solid #243050;border-radius:16px;padding:14px;margin-bottom:12px}
+.ri{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #1e293b}
+.ri:last-child{border:none;padding-bottom:0}
+.rt{font-size:12px;font-weight:700;color:#60a5fa;min-width:80px;flex-shrink:0}
+.rd{font-size:13px;color:#94a3b8}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>StoxEye — Learning Roadmap</h1>
+  <p>Konkrétní videa na jeden klik</p>
+</div>
+
+<div class="tabs">
+  <button class="tab on" onclick="sw(0)">🔴 Hned teď</button>
+  <button class="tab" onclick="sw(1)">🟡 3–6 měsíců</button>
+  <button class="tab" onclick="sw(2)">🟢 6–12 měsíců</button>
+  <button class="tab" onclick="sw(3)">⭐ Rutina</button>
+</div>
+
+<!-- FAZE 0 -->
+<div class="phase on" id="p0">
+  <div class="tip">💡 Appka funguje. Potřebuješ lidi kteří se zaregistrují. Tyto 3 věci mají největší dopad.</div>
+
+  <div class="sec">1. Copywriting</div>
+  <div class="card">
+    <div class="pill p1">🔴 Priorita #1</div>
+    <div class="card-head"><div class="ico">✍️</div><div><div class="card-title">Copywriting</div><div class="card-sub">2 týdny · Zdarma</div></div></div>
+    <div class="card-desc">Texty které prodávají — landing page, reklamy, emaily. Největší dopad na konverze StoxEye.</div>
+    <a class="lnk" href="https://www.youtube.com/watch?v=sKOcCQh5nac" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Alex Hormozi — Copywriting Masterclass</span><span class="lnk-src">Jak psát texty které prodávají · 1M knih prodáno</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=1WqKaewGsTE" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Alex Hormozi — How to Attract Your Ideal Clients</span><span class="lnk-src">Jak přilákat platící zákazníky</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=POAgwQKBcMU" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Alex Hormozi — Advice on SaaS</span><span class="lnk-src">Specificky pro SaaS produkty jako StoxEye</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://kit.com/resources/blog/email-marketing-automation-examples" target="_blank">
+      <span style="font-size:20px">📧</span>
+      <div class="lnk-body"><span class="lnk-title">Email Copywriting Guide</span><span class="lnk-src">ConvertKit · Onboarding sekvence pro SaaS</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">2. SEO</div>
+  <div class="card">
+    <div class="pill p1">🔴 Priorita #2</div>
+    <div class="card-head"><div class="ico">🔍</div><div><div class="card-title">SEO základy</div><div class="card-sub">2 týdny · Zdarma</div></div></div>
+    <div class="card-desc">Organický provoz zdarma navždy. Optimalizuj stoxeye.app pro "stock screener", "AI stock analysis".</div>
+    <a class="lnk" href="https://www.youtube.com/watch?v=xsVTqzratPs" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Complete SEO Course for Beginners — Ahrefs</span><span class="lnk-src">Kompletní kurz — jak rankovat #1 na Google</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=x5hH_lt8Guw" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Official Ahrefs Tutorial — How to Use Ahrefs</span><span class="lnk-src">Jak používat Ahrefs pro SEO · Officiální tutorial</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=RFlpwKQ0bEs" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Technical SEO Best Practices — Ahrefs</span><span class="lnk-src">Technické SEO pro stoxeye.app</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://ahrefs.com/academy/seo-training-course" target="_blank">
+      <span style="font-size:20px">🎓</span>
+      <div class="lnk-body"><span class="lnk-title">Ahrefs Academy — SEO Certifikát</span><span class="lnk-src">ahrefs.com · Zdarma s certifikátem</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">3. Meta Ads & Instagram Ads</div>
+  <div class="card">
+    <div class="pill p1">🔴 Priorita #3</div>
+    <div class="card-head"><div class="ico">📣</div><div><div class="card-title">Meta Ads / Instagram Ads</div><div class="card-sub">2 týdny · Kurzy zdarma</div></div></div>
+    <div class="card-desc">Placená reklama pro StoxEye. Začni s 300 Kč a testuj co funguje nejlépe.</div>
+    <a class="lnk" href="https://www.youtube.com/watch?v=9SAqt5NzSPY" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Meta Ads Full Tutorial for Beginners 2026</span><span class="lnk-src">Nejnovější tutorial · Krok za krokem</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=VdmiVZmXD08" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">How to Run Instagram Ads 2025 — Step by Step</span><span class="lnk-src">Specificky Instagram reklamy pro StoxEye</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=OqOtqC2yHlQ" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Facebook Ads Tutorial for Beginners 2025</span><span class="lnk-src">Kompletní Meta Ads setup od nuly</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.facebook.com/business/learn/paths/facebook-ads-beginner" target="_blank">
+      <span style="font-size:20px">📘</span>
+      <div class="lnk-body"><span class="lnk-title">Meta Blueprint — Officiální kurz</span><span class="lnk-src">Certifikát od Facebooku · Zdarma</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- FAZE 1 -->
+<div class="phase" id="p1">
+  <div class="tip">💡 Máš první uživatele. Stabilizuj příjem, zlepši backend a buduj email marketing pro retenci.</div>
+
+  <div class="sec">Python pokročileji</div>
+  <div class="card">
+    <div class="pill p2">🟡 Střednědobě</div>
+    <div class="card-head"><div class="ico">🐍</div><div><div class="card-title">Python — CS50P Harvard</div><div class="card-sub">6 týdnů · Zdarma · 6h/týden</div></div></div>
+    <div class="card-desc">Nejlepší Python kurz na světě. Po dokončení přidáš nové features do StoxEye sám bez Claude Code.</div>
+    <a class="lnk" href="https://cs50.harvard.edu/python/" target="_blank">
+      <span style="font-size:20px">🎓</span>
+      <div class="lnk-body"><span class="lnk-title">CS50P — Harvard Python (hlavní stránka)</span><span class="lnk-src">cs50.harvard.edu/python · 10 týdnů · Zdarma</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">CS50P — Všechny přednášky na YouTube</span><span class="lnk-src">Harvard · Kompletní playlist · 10 lekcí</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python" target="_blank">
+      <span style="font-size:20px">📜</span>
+      <div class="lnk-body"><span class="lnk-title">CS50P na edX — s certifikátem</span><span class="lnk-src">Verified certificate · Zdarma</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">SQL a databáze</div>
+  <div class="card">
+    <div class="pill p2">🟡 Střednědobě</div>
+    <div class="card-head"><div class="ico">🗄️</div><div><div class="card-title">SQL — PostgreSQL</div><div class="card-sub">4 týdny · Zdarma</div></div></div>
+    <div class="card-desc">Přejít z users.json na PostgreSQL na Railway. Nutné pro škálování nad 100 uživatelů.</div>
+    <a class="lnk" href="https://www.youtube.com/watch?v=qw--VYLpxG4" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Learn PostgreSQL — Full Course for Beginners</span><span class="lnk-src">freeCodeCamp · 4 hodinový kompletní kurz</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=aQQL6W_FMy0" target="_blank">
+      <span style="font-size:20px">▶️</span>
+      <div class="lnk-body"><span class="lnk-title">Learn Relational Databases — freeCodeCamp</span><span class="lnk-src">PostgreSQL · Základy relačních databází</span></div>
+      <span class="badge vid">VIDEO</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.freecodecamp.org/learn/relational-database/" target="_blank">
+      <span style="font-size:20px">🎓</span>
+      <div class="lnk-body"><span class="lnk-title">freeCodeCamp — Relational Database Certifikát</span><span class="lnk-src">freecodecamp.org · Certifikát zdarma</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">Email marketing</div>
+  <div class="card">
+    <div class="pill p2">🟡 Střednědobě</div>
+    <div class="card-head"><div class="ico">📧</div><div><div class="card-title">Email Marketing pro SaaS</div><div class="card-sub">2 týdny · Zdarma</div></div></div>
+    <div class="card-desc">Onboarding sekvence, retence uživatelů, snížení churn rate. Klíčové pro StoxEye Pro.</div>
+    <a class="lnk" href="https://mailchimp.com/resources/email-marketing-field-guide/" target="_blank">
+      <span style="font-size:20px">🐵</span>
+      <div class="lnk-body"><span class="lnk-title">Mailchimp — Email Marketing Guide</span><span class="lnk-src">Kompletní průvodce pro SaaS produkty</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://kit.com/resources/blog/email-sequence" target="_blank">
+      <span style="font-size:20px">📬</span>
+      <div class="lnk-body"><span class="lnk-title">Kit (ConvertKit) — SaaS Email Sekvence</span><span class="lnk-src">Onboarding sekvence krok za krokem</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- FAZE 2 -->
+<div class="phase" id="p2">
+  <div class="tip">💡 StoxEye generuje stabilní příjem. Škáluješ — lepší frontend, finance do hloubky, UX a právní základy.</div>
+
+  <div class="sec">JavaScript</div>
+  <div class="card">
+    <div class="pill p3">🟢 Dlouhodobě</div>
+    <div class="card-head"><div class="ico">⚡</div><div><div class="card-title">JavaScript pokročileji</div><div class="card-sub">6 týdnů · Zdarma</div></div></div>
+    <div class="card-desc">Async/await, fetch API, DOM manipulation. Real-time grafy v StoxEye bez backendu.</div>
+    <a class="lnk" href="https://javascript.info" target="_blank">
+      <span style="font-size:20px">📖</span>
+      <div class="lnk-body"><span class="lnk-title">javascript.info — Kompletní JS průvodce</span><span class="lnk-src">Nejlepší JS resource na internetu · Zdarma</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">
+      <span style="font-size:20px">🎓</span>
+      <div class="lnk-body"><span class="lnk-title">freeCodeCamp — JavaScript Certifikát</span><span class="lnk-src">Algoritmy a datové struktury · Certifikát</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">Finanční analýza & Trading</div>
+  <div class="card">
+    <div class="pill p3">🟢 Průběžně</div>
+    <div class="card-head"><div class="ico">📈</div><div><div class="card-title">Finanční analýza & Trading</div><div class="card-sub">Průběžně · Zdarma</div></div></div>
+    <div class="card-desc">Lépe porozumět co StoxEye počítá — RSI, MACD, fundamenty, options flow.</div>
+    <a class="lnk" href="https://www.investopedia.com/technical-analysis-4689657" target="_blank">
+      <span style="font-size:20px">📊</span>
+      <div class="lnk-body"><span class="lnk-title">Investopedia — Technical Analysis</span><span class="lnk-src">RSI, MACD, Bollinger Bands, EMA · Kompletní průvodce</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.investopedia.com/fundamental-analysis-4689757" target="_blank">
+      <span style="font-size:20px">💰</span>
+      <div class="lnk-body"><span class="lnk-title">Investopedia — Fundamental Analysis</span><span class="lnk-src">P/E, FCF, ROIC, revenue growth</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+
+  <div class="sec">UX Design & Právní základy</div>
+  <div class="card">
+    <div class="pill p3">🟢 Průběžně</div>
+    <div class="card-head"><div class="ico">🎨</div><div><div class="card-title">UX Design + Právo</div><div class="card-sub">Průběžně · Zdarma</div></div></div>
+    <div class="card-desc">User research, wireframing, GDPR, živnostenský zákon. Nutné pro legální provoz StoxEye i Elektrovia.</div>
+    <a class="lnk" href="https://www.nngroup.com/articles/" target="_blank">
+      <span style="font-size:20px">🔬</span>
+      <div class="lnk-body"><span class="lnk-title">Nielsen Norman Group — UX Articles</span><span class="lnk-src">Nejlepší UX research na světě</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://gdpr.eu/what-is-gdpr/" target="_blank">
+      <span style="font-size:20px">🔒</span>
+      <div class="lnk-body"><span class="lnk-title">GDPR — Kompletní průvodce</span><span class="lnk-src">Co musíš splnit pro EU uživatele StoxEye</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+    <a class="lnk" href="https://www.podnikatel.cz/zivnost/" target="_blank">
+      <span style="font-size:20px">📋</span>
+      <div class="lnk-body"><span class="lnk-title">Podnikatel.cz — Živnostenský zákon</span><span class="lnk-src">Vše o živnosti v češtině</span></div>
+      <span class="badge free">FREE</span><span class="arr">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- RUTINA -->
+<div class="phase" id="p3">
+  <div class="tip">💡 30-60 minut denně konzistentně bije víkendové maratony. Malé kroky každý den budují návyk.</div>
+
+  <div class="sec">Denní rutina</div>
+  <div class="routine">
+    <div class="ri"><span class="rt">🌅 Ráno</span><span class="rd">20 min — kurz nebo video dle aktuální fáze</span></div>
+    <div class="ri"><span class="rt">☀️ Odpoledne</span><span class="rd">20 min — praktické cvičení na StoxEye</span></div>
+    <div class="ri"><span class="rt">🌙 Večer</span><span class="rd">10 min — 1 post na Instagram nebo TikTok</span></div>
+  </div>
+
+  <div class="sec">Všechna videa — rychlý přístup</div>
+  <div class="card">
+    <a class="lnk" href="https://www.youtube.com/watch?v=sKOcCQh5nac" target="_blank"><span style="font-size:20px">▶️</span><div class="lnk-body"><span class="lnk-title">Hormozi — Copywriting Masterclass</span><span class="lnk-src">Marketing a prodej pro StoxEye</span></div><span class="badge vid">VIDEO</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=xsVTqzratPs" target="_blank"><span style="font-size:20px">▶️</span><div class="lnk-body"><span class="lnk-title">Ahrefs — Complete SEO Course</span><span class="lnk-src">Rankovat stoxeye.app na Google</span></div><span class="badge vid">VIDEO</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=9SAqt5NzSPY" target="_blank"><span style="font-size:20px">▶️</span><div class="lnk-body"><span class="lnk-title">Meta Ads Tutorial 2026</span><span class="lnk-src">Instagram reklamy pro StoxEye</span></div><span class="badge vid">VIDEO</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=VdmiVZmXD08" target="_blank"><span style="font-size:20px">▶️</span><div class="lnk-body"><span class="lnk-title">Instagram Ads Step by Step 2025</span><span class="lnk-src">Krok za krokem od nuly</span></div><span class="badge vid">VIDEO</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://cs50.harvard.edu/python/" target="_blank"><span style="font-size:20px">🎓</span><div class="lnk-body"><span class="lnk-title">CS50P Harvard Python</span><span class="lnk-src">cs50.harvard.edu/python</span></div><span class="badge free">FREE</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://www.youtube.com/watch?v=qw--VYLpxG4" target="_blank"><span style="font-size:20px">▶️</span><div class="lnk-body"><span class="lnk-title">freeCodeCamp — PostgreSQL Full Course</span><span class="lnk-src">SQL databáze místo users.json</span></div><span class="badge vid">VIDEO</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://javascript.info" target="_blank"><span style="font-size:20px">⚡</span><div class="lnk-body"><span class="lnk-title">javascript.info</span><span class="lnk-src">Nejlepší JS resource</span></div><span class="badge free">FREE</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://www.investopedia.com" target="_blank"><span style="font-size:20px">📈</span><div class="lnk-body"><span class="lnk-title">Investopedia</span><span class="lnk-src">Finanční analýza & trading</span></div><span class="badge free">FREE</span><span class="arr">›</span></a>
+    <a class="lnk" href="https://stoxeye.app" target="_blank"><span style="font-size:20px">🚀</span><div class="lnk-body"><span class="lnk-title">StoxEye</span><span class="lnk-src">Tvoje aplikace — testuj pravidelně</span></div><span class="arr">›</span></a>
+  </div>
+</div>
+
+<script>
+function sw(n){
+  document.querySelectorAll('.phase').forEach((el,i)=>el.classList.toggle('on',i===n));
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('on',i===n));
+}
+</script>
+</body>
+</html>
