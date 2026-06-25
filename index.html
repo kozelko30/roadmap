@@ -1,0 +1,168 @@
+
+<h2 class="sr-only">StoxEye Learning Roadmap — klikatelné odkazy na všechny zdroje</h2>
+
+<style>
+.tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;padding-bottom:2px}
+.tab{flex-shrink:0;padding:7px 13px;border-radius:99px;font-size:13px;font-weight:500;cursor:pointer;border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);background:transparent;transition:all .15s}
+.tab.on{background:var(--color-background-info);color:var(--color-text-info);border-color:var(--color-border-info)}
+.phase{display:none}.phase.on{display:block}
+.tip{background:var(--color-background-info);border:0.5px solid var(--color-border-info);border-radius:var(--border-radius-md);padding:10px 12px;font-size:13px;color:var(--color-text-info);margin-bottom:14px}
+.sec{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-tertiary);margin:14px 0 8px}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px;margin-bottom:10px}
+.card-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.icon{width:38px;height:38px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--color-background-secondary)}
+.card-title{font-size:15px;font-weight:500;color:var(--color-text-primary)}
+.card-sub{font-size:12px;color:var(--color-text-tertiary)}
+.card-desc{font-size:13px;color:var(--color-text-secondary);margin-bottom:10px;line-height:1.5}
+.lnk{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);text-decoration:none;color:var(--color-text-primary);margin-bottom:6px;transition:background .15s;cursor:pointer}
+.lnk:hover{background:var(--color-background-tertiary)}
+.lnk-icon{font-size:18px;flex-shrink:0;color:var(--color-text-secondary)}
+.lnk-body{flex:1;min-width:0}
+.lnk-title{font-size:13px;font-weight:500;color:var(--color-text-primary);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnk-src{font-size:11px;color:var(--color-text-tertiary)}
+.free{font-size:10px;font-weight:500;color:var(--color-text-success);background:var(--color-background-success);border:0.5px solid var(--color-border-success);padding:2px 7px;border-radius:99px;flex-shrink:0}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;padding:3px 9px;border-radius:99px;margin-bottom:8px}
+.p-now{background:var(--color-background-danger);color:var(--color-text-danger)}
+.p-soon{background:var(--color-background-warning);color:var(--color-text-warning)}
+.p-later{background:var(--color-background-success);color:var(--color-text-success)}
+.routine{background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);padding:14px;margin-bottom:10px}
+.r-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.r-item:last-child{border-bottom:none;padding-bottom:0}
+.r-time{font-size:12px;font-weight:500;color:var(--color-text-info);min-width:75px;flex-shrink:0}
+.r-text{font-size:13px;color:var(--color-text-secondary)}
+</style>
+
+<div style="padding:1rem 0 0">
+<div class="tabs">
+  <button class="tab on" onclick="sw(0)">Hned ted</button>
+  <button class="tab" onclick="sw(1)">3-6 mesicu</button>
+  <button class="tab" onclick="sw(2)">6-12 mesicu</button>
+  <button class="tab" onclick="sw(3)">Rutina</button>
+</div>
+
+<div class="phase on" id="p0">
+  <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Appka funguje. Potrebujes lidi kteri se zaregistruji. Tyto 3 veci maji nejvetsi dopad.</div>
+
+  <div class="sec">1. Copywriting</div>
+  <div class="card">
+    <div class="pill p-now">Priorita #1</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-writing" aria-hidden="true"></i></div><div><div class="card-title">Copywriting</div><div class="card-sub">2 tydny · Zdarma</div></div></div>
+    <div class="card-desc">Texty ktere prodavaji — landing page, reklamy, emaily. Nejvetsi dopad na konverze.</div>
+    <a class="lnk" onclick="openLink('https://www.youtube.com/c/alexhormozi')"><i class="ti ti-brand-youtube lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Alex Hormozi — YouTube</span><span class="lnk-src">Marketing, offers, prodej · 4.2M odberatelu</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://convertkit.com/resources/blog/email-copywriting')"><i class="ti ti-mail lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Email Copywriting Guide</span><span class="lnk-src">ConvertKit · Onboarding sekvence</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">2. SEO</div>
+  <div class="card">
+    <div class="pill p-now">Priorita #2</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-search lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">SEO zaklady</div><div class="card-sub">2 tydny · Zdarma</div></div></div>
+    <div class="card-desc">Organicky provoz zdarma navzdy. Optimalizuj stoxeye.app pro "stock screener", "AI stock analysis".</div>
+    <a class="lnk" onclick="openLink('https://www.youtube.com/playlist?list=PLvJ_dXFSpd2vk6rQ4Rta5MhDIRmakFbp6')"><i class="ti ti-brand-youtube lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Ahrefs SEO Course for Beginners</span><span class="lnk-src">YouTube Playlist · Kompletni kurz</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://ahrefs.com/academy/seo-training-course')"><i class="ti ti-certificate lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Ahrefs Academy — SEO Training</span><span class="lnk-src">ahrefs.com · Certifikat zdarma</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.youtube.com/c/AhrefsCom')"><i class="ti ti-brand-youtube lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Ahrefs YouTube kanal</span><span class="lnk-src">Keyword research, link building, on-page SEO</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">3. Meta Ads & TikTok Ads</div>
+  <div class="card">
+    <div class="pill p-now">Priorita #3</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-speakerphone lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">Meta Ads / TikTok Ads</div><div class="card-sub">2 tydny · Zdarma</div></div></div>
+    <div class="card-desc">Placena reklama, targeting, A/B testovani. Zacni s 300 Kc a testuj co funguje.</div>
+    <a class="lnk" onclick="openLink('https://www.facebook.com/business/learn')"><i class="ti ti-brand-facebook lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Meta Blueprint</span><span class="lnk-src">Officialni kurz od Facebooku · Certifikat</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.tiktok.com/business/en/learn')"><i class="ti ti-brand-tiktok lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">TikTok for Business</span><span class="lnk-src">Officialni TikTok Ads kurz</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://analytics.google.com/analytics/academy/')"><i class="ti ti-chart-bar lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Google Analytics Academy</span><span class="lnk-src">Conversion tracking, funnel analyza</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+<div class="phase" id="p1">
+  <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Mas prvni uzivatele. Stabilizuj prijem, zleps backend a buduj email marketing.</div>
+
+  <div class="sec">Python pokrocileji</div>
+  <div class="card">
+    <div class="pill p-soon">Strednedobe</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-brand-python lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">Python — CS50P Harvard</div><div class="card-sub">6 tydnu · Zdarma · 6h/tyden</div></div></div>
+    <div class="card-desc">Nejlepsi Python kurz na svete. Po dokonceni pridas nove features do StoxEye sam.</div>
+    <a class="lnk" onclick="openLink('https://cs50.harvard.edu/python/')"><i class="ti ti-school lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">CS50P — Harvard Python</span><span class="lnk-src">cs50.harvard.edu/python · 10 tydnu</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python')"><i class="ti ti-certificate lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">CS50P na edX (s certifikatem)</span><span class="lnk-src">edX · Verified certificate</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">SQL a databaze</div>
+  <div class="card">
+    <div class="pill p-soon">Strednedobe</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-database lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">SQL — PostgreSQL</div><div class="card-sub">4 tydny · Zdarma</div></div></div>
+    <div class="card-desc">Prejit z users.json na PostgreSQL na Railway. Nutne pro skalovani nad 100 uzivatelu.</div>
+    <a class="lnk" onclick="openLink('https://www.youtube.com/watch?v=qw--VYLpxG4')"><i class="ti ti-brand-youtube lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">freeCodeCamp — PostgreSQL</span><span class="lnk-src">YouTube · 4 hodinovy kompletni kurz</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.freecodecamp.org/learn/relational-database/')"><i class="ti ti-certificate lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">freeCodeCamp — Relational Database</span><span class="lnk-src">freecodecamp.org · Certifikat</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">Email marketing</div>
+  <div class="card">
+    <div class="pill p-soon">Strednedobe</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-mail lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">Email Marketing</div><div class="card-sub">2 tydny · Zdarma</div></div></div>
+    <div class="card-desc">Onboarding sekvence, retence uzivatelu, snizeni churn rate. Klicove pro SaaS.</div>
+    <a class="lnk" onclick="openLink('https://mailchimp.com/resources/email-marketing-guide/')"><i class="ti ti-mail lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Mailchimp — Email Marketing Guide</span><span class="lnk-src">Kompletni pruvodce pro SaaS</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://kit.com/resources')"><i class="ti ti-mail lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Kit (ConvertKit) — Resources</span><span class="lnk-src">Email sekvence pro SaaS</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+<div class="phase" id="p2">
+  <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> StoxEye generuje stabilni prijem. Skalujes — lepsi frontend, finance do hloubky, UX a pravni zaklady.</div>
+
+  <div class="sec">JavaScript</div>
+  <div class="card">
+    <div class="pill p-later">Dlouhodobe</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-brand-javascript lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">JavaScript pokrocileji</div><div class="card-sub">6 tydnu · Zdarma</div></div></div>
+    <div class="card-desc">Async/await, fetch API, DOM. Real-time grafy v StoxEye bez backendu.</div>
+    <a class="lnk" onclick="openLink('https://javascript.info')"><i class="ti ti-book lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">javascript.info</span><span class="lnk-src">Nejlepsi JS resource na internetu</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/')"><i class="ti ti-certificate lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">freeCodeCamp — JavaScript</span><span class="lnk-src">Certifikat · Algoritmy a datove struktury</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">Financni analyza</div>
+  <div class="card">
+    <div class="pill p-later">Prubezne</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-chart-line lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">Financni analyza & Trading</div><div class="card-sub">Prubezne · Zdarma</div></div></div>
+    <div class="card-desc">Lepe porozumet co StoxEye pocita — RSI, MACD, fundamenty, options flow.</div>
+    <a class="lnk" onclick="openLink('https://www.investopedia.com/technical-analysis-4689657')"><i class="ti ti-chart-candle lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Investopedia — Technical Analysis</span><span class="lnk-src">Kompletni pruvodce TA</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.investopedia.com/fundamental-analysis-4689757')"><i class="ti ti-report-money lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Investopedia — Fundamental Analysis</span><span class="lnk-src">P/E, FCF, ROIC, revenue growth</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="sec">UX Design & Pravni zaklady</div>
+  <div class="card">
+    <div class="pill p-later">Dlouhodobe</div>
+    <div class="card-head"><div class="icon"><i class="ti ti-layout lnk-icon" aria-hidden="true"></i></div><div><div class="card-title">UX Design + Pravo</div><div class="card-sub">Prubezne</div></div></div>
+    <div class="card-desc">User research, wireframing, GDPR, zivnostenskeho zakona. Nutne pro legalni provoz.</div>
+    <a class="lnk" onclick="openLink('https://www.nngroup.com/articles/')"><i class="ti ti-eye lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Nielsen Norman Group — UX</span><span class="lnk-src">Nejlepsi UX research na svete</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://gdpr.eu/what-is-gdpr/')"><i class="ti ti-lock lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">GDPR — Kompletni pruvodce</span><span class="lnk-src">Co musis splnit pro EU uzivatele</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.podnikatel.cz/zivnost/')"><i class="ti ti-file-text lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Podnikatel.cz — Zivnostensky zakon</span><span class="lnk-src">Vse o zivnosti v cestine</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+<div class="phase" id="p3">
+  <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> 30-60 minut denne konzistentne > vikendove maratony. Male kroky kazdy den budují navyk.</div>
+
+  <div class="sec">Denni rutina</div>
+  <div class="routine">
+    <div class="r-item"><span class="r-time">Rano</span><span class="r-text">20 min — kurz nebo cteni dle aktualni faze</span></div>
+    <div class="r-item"><span class="r-time">Odpoledne</span><span class="r-text">20 min — prakticke cviceni na StoxEye</span></div>
+    <div class="r-item"><span class="r-time">Vecer</span><span class="r-text">10 min — 1 post na Instagram nebo TikTok o tom co ses naucil</span></div>
+  </div>
+
+  <div class="sec">Vsechny zdroje — rychly pristup</div>
+  <div class="card">
+    <a class="lnk" onclick="openLink('https://cs50.harvard.edu/python/')"><i class="ti ti-school lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">CS50P Harvard Python</span><span class="lnk-src">cs50.harvard.edu/python</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.youtube.com/c/alexhormozi')"><i class="ti ti-brand-youtube lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Alex Hormozi YouTube</span><span class="lnk-src">Marketing & Sales</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://ahrefs.com/academy/seo-training-course')"><i class="ti ti-certificate lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Ahrefs Academy</span><span class="lnk-src">SEO certifikat zdarma</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.facebook.com/business/learn')"><i class="ti ti-brand-facebook lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Meta Blueprint</span><span class="lnk-src">Facebook & Instagram Ads</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.freecodecamp.org')"><i class="ti ti-code lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">freeCodeCamp</span><span class="lnk-src">SQL, JS, Python kurzy</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://javascript.info')"><i class="ti ti-brand-javascript lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">javascript.info</span><span class="lnk-src">Nejlepsi JS resource</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://www.investopedia.com')"><i class="ti ti-chart-line lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">Investopedia</span><span class="lnk-src">Financni analyza & trading</span></div><span class="free">FREE</span><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+    <a class="lnk" onclick="openLink('https://stoxeye.app')"><i class="ti ti-rocket lnk-icon" aria-hidden="true"></i><div class="lnk-body"><span class="lnk-title">StoxEye</span><span class="lnk-src">Tvoje aplikace — testuj pravidelne</span></div><i class="ti ti-chevron-right" style="color:var(--color-text-tertiary)" aria-hidden="true"></i></a>
+  </div>
+</div>
+</div>
+
+<script>
+function sw(n){
+  document.querySelectorAll('.phase').forEach((el,i)=>el.classList.toggle('on',i===n));
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('on',i===n));
+}
+</script>
